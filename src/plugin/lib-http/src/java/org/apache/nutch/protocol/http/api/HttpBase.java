@@ -309,6 +309,7 @@ public abstract class HttpBase implements Protocol {
     StringBuffer buf= new StringBuffer();
 
     buf.append(agentName);
+    /*
     if (agentVersion != null) {
       buf.append("/");
       buf.append(agentVersion);
@@ -335,6 +336,7 @@ public abstract class HttpBase implements Protocol {
 
       buf.append(")");
     }
+    */
     return buf.toString();
   }
 
