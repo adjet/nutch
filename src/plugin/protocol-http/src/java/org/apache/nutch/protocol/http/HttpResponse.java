@@ -153,10 +153,14 @@ public class HttpResponse implements Response {
       reqStr.append(portString);
       reqStr.append("\r\n");
 
-      reqStr.append("Accept-Encoding: x-gzip, gzip\r\n");
+      reqStr.append("Accept-Encoding: gzip,deflate\r\n");
 
       reqStr.append("Accept: ");
       reqStr.append(this.http.getAccept());
+      reqStr.append("\r\n");
+
+      reqStr.append("Accept-Language: ");
+      reqStr.append(this.http.getAcceptLanguage());
       reqStr.append("\r\n");
 
       String userAgent = http.getUserAgent();
