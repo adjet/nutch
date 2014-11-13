@@ -206,7 +206,7 @@ public class Http extends HttpBase {
 		headers.add(new Header("User-Agent", userAgent));
 		// prefer English
 		headers.add(new Header("Accept-Language",
-				"en-us,en-gb,en;q=0.7,*;q=0.3"));
+				"ru,en-US;q=0.8,en;q=0.6"));
 		// prefer UTF-8
 		headers.add(new Header("Accept-Charset",
 				"utf-8,ISO-8859-1;q=0.7,*;q=0.7"));
@@ -215,7 +215,7 @@ public class Http extends HttpBase {
 				"Accept",
 				"text/html,application/xml;q=0.9,application/xhtml+xml,text/xml;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5"));
 		// accept gzipped content
-		headers.add(new Header("Accept-Encoding", "x-gzip, gzip, deflate"));
+		headers.add(new Header("Accept-Encoding", "gzip,deflate"));
 		hostConf.getParams().setParameter("http.default-headers", headers);
 
 		// HTTP proxy server details
